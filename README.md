@@ -1,3 +1,3 @@
 # Todo List App
 
-Using SQlite database
+Using SQflite database
