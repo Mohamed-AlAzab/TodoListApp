@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import '../pages/home_page.dart';
 
 void main() {
+  // Initialize FFI
+  sqfliteFfiInit();
+  // Set the factory
+  databaseFactory = databaseFactoryFfi;
+
+  // Run your app
   runApp(const MyApp());
 }
 
@@ -19,7 +25,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
